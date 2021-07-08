@@ -1,0 +1,127 @@
+import React, { Component } from 'react';
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+  FlatList,
+} from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+export default class Contacts extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount = () => {
+    this.apifetch();
+  };
+
+  apifetch() {
+    fetch('https://project252.aaratechnologies.in/web/common/category', {
+      method: 'GET',
+      //Request Type
+    })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({ data: responseJson.response_data.data });
+      })
+      //If response is not in json then in error
+      .catch((error) => {
+        //Error
+        alert(JSON.stringify(error));
+      });
+  }
+
+  renderItem = ({ item }) => {
+    let image = item.unicode;
+    return (
+      <TouchableOpacity
+        style={{
+          width: windowWidth / 1.2,
+          flexDirection: 'row',
+          backgroundColor: '#e8e6e6',
+          alignSelf: 'center',
+          borderRadius: 20,
+          marginTop: 15,
+          height: windowHeight / 5,
+        }}>
+        <View style={{ width: '50%', marginTop: 25, marginLeft: 5 }}>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#fff',
+              width: 70,
+              alignItems: 'center',
+              borderRadius: 10,
+              top: -10,
+            }}>
+            <Text style={{ fontSize: 12 }}>Hello</Text>
+          </TouchableOpacity>
+          <Text style={{ fontSize: 15, fontWeight: 'bold' }}>{item.title}</Text>
+          <Text style={{ fontSize: 12 }}>
+            lorem ipsum lorem ipsum lorem ipsum lorem
+          </Text>
+        </View>
+        <View style={{ width: '50%' }}>
+          <Image
+            style={{ width: '100%', height: '100%', borderRadius: 15 }}
+            source={{
+              uri:
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/salad-mix-plate-shot-from-above-on-rustic-wooden-royalty-free-image-1018199524-1556130377.jpg',
+            }}
+          />
+        </View>
+      </TouchableOpacity>
+    );
+  };
+
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: windowWidth / 1.2,
+            alignItems: 'center',
+            alignSelf: 'center',
+          }}>
+          <TouchableOpacity>
+            <Image
+              style={{ width: 25, height: 25 }}
+              source={{
+                uri: 'https://static.thenounproject.com/png/3547976-200.png',
+              }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              style={{ width: 22, height: 22 }}
+              source={{
+                uri:
+                  'https://cdn.icon-icons.com/icons2/2566/PNG/512/search_icon_153438.png',
+              }}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={{ left: 30, marginTop: 15 }}>
+          <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Buddha Bowls</Text>
+        </View>
+        <FlatList
+          extraData={this.state}
+          data={this.state.data}
+          keyExtractor={(item) => {
+            return item.id;
+          }}
+          renderItem={this.renderItem}
+        />
+      </View>
+    );
+  }
+}

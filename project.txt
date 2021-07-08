@@ -1,0 +1,47 @@
+1. login & signup (mobile number and password).
+2. after login open home screen
+3. user 1 send the fried request user 2 by unique code which get from backend while login.
+4. user 1 can send some selected restaurent list to use 2(date, time, food preferces)
+5. user 2 select restaurent and send back to the user 1 then user 1 finalise the one perticular place.
+
+
+food preferences - google place api ke through (setup from google console)
+
+geolocation - react-native-geolocation npm used for geolocation.
+
+image pick - react-native-image-picker npm used for image picker.
+
+loader - for loader we used ActivityIndicator
+
+team size - 2 (in react native)
+
+
+
+
+
+validate = (text) => {
+  console.log(text);
+  let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+  if (reg.test(text) === false) {
+    console.log("Email is Not Correct");
+    this.setState({ email: text })
+    return false;
+  }
+  else {
+    this.setState({ email: text })
+    console.log("Email is Correct");
+  }
+}
+
+
+<TextInput
+  placeholder="Email ID"
+  onChangeText={(text) => this.validate(text)}
+  value={this.state.email}
+/>
+
+
+Redux - redux is state management library.its store the state in single store. basically we used for data handling in the project. 
+exapmle- if we fetch the api data in one component then we can use the data in anywhere in the project.
+
+session - 

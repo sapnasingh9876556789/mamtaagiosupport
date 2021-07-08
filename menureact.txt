@@ -1,0 +1,20 @@
+import React, { Component } from 'react';
+import { View ,Image} from 'react-native';
+
+export default class FlexDirectionBasics extends Component {
+  render() {
+    return (
+      // Try setting `flexDirection` to `column`.
+      <View style={{flex:1,justifyContent:'space-between',flexDirection: 'row', }}>
+      <View style={{width: 70, height: 70, backgroundColor: 'skyblue',marginLeft:50,borderRadius:50,}}>
+      <Image source={{uri: "https://cdn.iconscout.com/icon/premium/png-512-thumb/business-woman-485075.png"}} style={{width:30, height:30,  justifyContent:'center', alignContent:'center',}}/>
+        </View>
+        <View style={{width: 70, height: 70, backgroundColor: 'skyblue',marginRight:50,borderRadius:50,}}>
+      <Image source={{uri: "https://cdn.iconscout.com/icon/premium/png-512-thumb/business-woman-485075.png"}} style={{width:30, height:30,  justifyContent:'center', alignContent:'center',}}/>
+        </View>
+        
+      </View>
+      
+    );
+  }
+};

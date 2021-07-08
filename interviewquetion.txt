@@ -1,0 +1,220 @@
+real dom vs vitual dom?
+
+virtual dom is extension of real dom (document object modal).
+virtual dom is very fast as compare to real dom.
+
+virtual dom is used for render the html tag in react.
+
+what is navigation?
+
+we use react-navigation (Version 4) npm in react native for navigate to one screen to another screen.
+
+this.props.navigation.navigate('homedetail')
+
+what is jsx (javascript xml)?
+
+we used for render the ui in react native.
+
+how many third party you used in your projects?
+
+i used lot of third party npm in my projects like react-native-image-picker, react-navigation, nativebase etc.
+
+which plateform we can release the app?
+
+Android - playstore
+Ios - app store
+
+
+
+
+what is react native?
+
+Ans:- React Native is an open-source JavaScript framework designed by Facebook for native 
+mobile applications development. in which we can build the mobile app on both plateform android and ios.
+
+What is benifit of react native?
+1. Cross Plateform technology(it  can  be use Android/Ios)
+2. Hot reloading(you can speed up your development time it means real time saving)
+3. easy to learn
+4. big community support.
+5. based on javascript code.
+
+Why you choose this field?
+
+i see this opportunity as a way to conribute to an exciting new technology. 
+i feel my skills are well suited to this position.
+react native is latest technology. i am exciting to learn new technology and i feel my skill are well
+suitale for this role.
+
+Latest version of react native?
+
+0.64 (previous version 0.63)
+
+Process of setup the react native project on android and ios?
+
+First we have to install react-native-cli packages and then we have to install node, 
+android studio, jdk, npm and setup in the projects then we moved on command prompt 
+and run some npm like react-native init ProjectName and then we have to run
+ react-native run-android and project will be run android plateform.
+
+we have to create project on macbook with react-native init command on command prompt and 
+we can run react-native run-ios on the commmand prompt then project will run on ios as well.
+
+How many projects you have done?
+
+I have done one projects its name called youpick!. basically it was a meetup app. 
+in which two peoples can meet on perticular place for like lunch or dinner. 
+in this app we have impliment some functionalities like google maps, restaurent apis.
+
+google restaurent api-> with the help of restaurent api we can search the restaurents
+in certain location.
+
+what is your role on this project?
+
+I have worked on ui part as well integration of some apis (Login, signup, forget password, change password, landing page screen).
+
+What is flexbox?
+in flexbox there is three component firstis flextDirection in which we have some value like row and colomn so with help these value we can 
+specify the ui in horizontally and vertically. second is justifyContainer(flex-start, flext-end, center) and third is alignitems(flex-start,flex-end, center).
+
+
+Name of the some basic components of react native?
+
+View, Text, TouchableOpacity, Image, ImageBackground, Button, ScrollView, SafeAreaView, StyleSheet
+
+
+
+What is state and props and diffrence between them?
+
+
+State-> state is basically we used for data handling and manipulation in react native component.
+it is mutable. we can change the value of the state at any time in projects.
+
+props-> props is basically we used for data handling and manipulation in react native component.
+but it is inmutable. we cannot change the value of the props at any time in projects.we can send the data from parent component to child component. 
+also we can send  the data from child component to parent component with the help of callback.
+
+
+
+What is diffrence between class component and functional component?
+
+1-> we can use state in class component but in functional component we can't use this.
+2-> we can achieve lifecycle method in class component but in functional component we cant.
+
+How we can achieve the lifecycle in functional component?
+
+For lifecycle method in functional component we can use react hooks like useState, useEffect.
+
+What is use of useEffect?
+
+With the help of useEffect we can memorize the data in component. we can achive the similar functionalities 
+like componentDiMount, componentwillunMount, componentDidupdate, 
+
+
+what is lifecycle method?
+
+1. Mounting
+2. Unmounting
+3. Updating
+4. Error Handling
+
+Mounting -> Constructor, render, componentDidmount
+Unmounting -> ComponentWillUnmount
+Updating -> render, componentShouldUpdate, ComponentDidupdate
+Error Handling -> ComponentDidcatch
+
+
+Constructor -> we can contructor for state initialization.
+render -> we can use for return the ui
+componentDidmount -> we can use for memorize the api data.
+ComponentWillUnmount -> we can use for unmounting the function.
+
+
+
+
+
+How can send data from parent component to child component?
+
+-->We can sent the data with the help of props.
+
+
+How can send data from child component to parent component?
+
+-->We can sent the data with the help of callback function.
+
+What is flatlist?
+
+With the help of flatlist we can show list in the screens.
+
+
+what is diffrence between flatlist and map method?
+
+in flatlist if we want to load the data from the server on limited number of data then with the help of 
+flatlist we can easily manage to that. but we cant manage in map method.
+
+how you integrate the api in react native?
+
+there are two methods we can integrate api in react native. first is fetch and second is axios
+
+what is different between axios and fetch?
+fetch is in-built component of  react native
+axios is third party npm.(node packaging manager)
+
+fetch: fetch are use api  it is use in https and  react native also use fetch
+Axios:- Axios are use api  but  it is use XML and http 
+Get axios from third party
+
+
+
+
+
+
+
+
+
+My name is mamta singh and i am from kushinagr uttar pradesh. i have done my mca from rajasthan technical university in 2019.
+currently i am working in crossobject as a software developer. i have 7 months expriance in react native and 
+i have done one project in react native.
+
+
+
+
+
+What is promisses?
+
+We use promisses for better error handling. in promisses we pass two arguements name called resolve and reject. 
+like its promise to give some objects in future like succes or error.
+
+what is async await?
+
+it is a extention of promisses.it is exectute one function received at one time while other function will wait.
+
+callback function?
+
+callback is great way to send the data from child component to parent component. 
+
+arrow function?
+
+we use inside the callback of arrow function. 
+pass the arguments from one fuction to another function.
+we dont have to use bind method.
+
+
+what is pure component?
+
+if any state of props data change then it will reload the component otherwise it will not reload the component in react native.
+
+How many threads in react native?
+
+1. Main Ui thread(for use Ui)
+2. shadow thread(for use functionality)
+3. javascript thread
+
+NAME SOME APP WHICH BUILT ON REACT Native?
+1.Facebook
+2.Instagram
+3. Tesla
+4. Skype
+5. Myntra
+
+hoc :-

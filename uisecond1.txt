@@ -1,0 +1,180 @@
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  FlatList,
+  Dimensions,
+  Alert,
+  ScrollView,
+} from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+export default class ProductView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        {
+          id: 1,
+          description:
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+          date: '2019-03-25 09:12:00',
+          color: '#228B22',
+          completed: 1,
+          Image:'https://cdn4.vectorstock.com/i/1000x1000/07/38/accept-icon-vector-5370738.jpg'
+        },
+        {
+          id: 2,
+          description: 'Aenean massa. Cum sociis natoque penatibus et magnis.',
+          date: '2019-03-25 10:23:00',
+          color: '#FF00FF',
+           Image:'https://cdn4.vectorstock.com/i/1000x1000/75/68/cancel-flat-white-color-icon-vector-6077568.jpg'
+        },
+        {
+          id: 3,
+          description:
+            "nascetur ridiculus mus. Donec quam felis, ultricies dnec.",
+          date: '2019-03-25 11:45:00',
+          color: '#4B0082',
+          completed: 1,
+           Image:'https://cdn4.vectorstock.com/i/1000x1000/07/38/accept-icon-vector-5370738.jpg'
+        },
+        {
+          id: 4,
+          description:
+            'Donec pede justo, fringilla vel, aliquet nec, vulputdate.',
+          date: '2019-03-25 09:27:00',
+          color: '#20B2AA',
+           Image:'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/valid-512.png'
+        },
+        {
+          id: 5,
+          description:
+            'Nullam dictum felis eu pede mollis pretium. Integer tirr.',
+          date: '2019-03-25 08:13:00',
+          color: '#000080',
+           Image:'https://cdn4.vectorstock.com/i/1000x1000/07/38/accept-icon-vector-5370738.jpg'
+        },
+        {
+          id: 6,
+          description:
+            'ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas st.',
+          date: '2019-03-25 10:22:00',
+          color: '#FF4500',
+          completed: 1,
+           Image:'https://cdn4.vectorstock.com/i/1000x1000/75/68/cancel-flat-white-color-icon-vector-6077568.jpg'
+        },
+        {
+          id: 7,
+          description:
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+          date: '2019-03-25 13:33:00',
+          color: '#FF0000',
+           Image:'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/valid-512.png'
+        },
+        {
+          id: 8,
+          description:
+            'Maecenas nec odio et ante tincidunt tempus. Donec vitae .',
+          date: '2019-03-25 11:56:00',
+          color: '#EE82EE',
+           Image:'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/valid-512.png'
+        },
+        {
+          id: 9,
+          description:
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+          date: '2019-03-25 15:00:00',
+          color: '#6A5ACD',
+           Image:'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/valid-512.png'
+        },
+        {
+          id: 10,
+          description:
+            ' Aenean imperdiet. Etiam ultricies nisi vel augues aasde.',
+          date: '2019-03-25 12:27:00',
+          color: '#DDA0DD',
+           Image:'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/valid-512.png'
+        },
+      ],
+    };
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <ScrollView style={styles.content}>
+          {this.state.data.map((item) => (
+            <View
+              style={{
+                width: windowWidth / 1.0,
+                height: 100,
+                backgroundColor: 'white',
+                borderRadius: 5,
+                marginTop: 10,
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{ backgroundColor: item.color, height: 100, width: 5 }}
+              />
+              <View>
+                <View
+                  style={{
+                    width: 20,
+                    height: 20,
+                    marginTop: 5,
+                    marginLeft: 10,
+                    borderRadius: 15,
+                    backgroundColor: item.color,
+                    justifyContent:'center',
+                    alignItems:'center'
+                  }}
+                >
+                <Image source={{uri: item.Image}} style={{width:10, height:10}} />
+                </View>
+
+                <Text
+                  style={{
+                    width: windowWidth / 1.2,
+                    marginLeft: 30,
+                    fontSize: 14,
+                    color: '#008080',
+                    fontWeight: 'bold',
+                  }}>
+                  {item.description}
+                </Text>
+                <View />
+                <Text
+                  style={{
+                    marginLeft: 30,
+                    fontSize: 15,
+                    fontWeight: 'bold',
+                    color: 'gray',
+                  }}>
+                  {item.date}
+                </Text>
+              </View>
+            </View>
+          ))}
+        </ScrollView>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 20,
+    backgroundColor: '#eeeeee',
+  },
+  content: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 20,
+  },
+});

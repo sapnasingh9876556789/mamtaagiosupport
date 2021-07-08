@@ -1,0 +1,69 @@
+import React from 'react';
+import { StyleSheet, Text, View,Image,ImageBackground} from 'react-native';
+const card = () => {
+    return (
+      <View style={styles.container}>
+        <text style={{textAlign:'center',color:'white',}}>YOU</text>
+        <Image source={{uri: "https://cdn.iconscout.com/icon/premium/png-512-thumb/business-woman-485075.png"}} style={{width:50, height:50, justifyContent:'left', borderRadius: 50, alignContent:'left' }}>
+  
+        </Image>
+         <View style={styles.MainContainer}>
+          <Text style={{textAlign:'center',color:'white',}}>HOME</Text>
+         <Image source={{uri: "https://img.icons8.com/bubbles/2x/home-page.png"}} style={{width:50, height:50, justifyContent:'left', borderRadius: 50, alignContent:'left' }}>
+          </Image>
+         </View>
+         <View style={styles.UpperContainer}>
+         <Text style={{textAlign:'center',color:'white'}}>LOVE</Text>
+         <Image source={{uri:"https://i.pinimg.com/originals/17/45/23/1745235227ba955bef3df3b403fecfbf.png"}} style={{width:50, height:50, justifyContent:'left', borderRadius: 50, alignContent:'left' }}></Image>
+         </View>
+         <View style={styles.LayoutContainer}>
+         <Text style={{textAlign:'center',color:'white',}}>FAMILY</Text>
+         <Image source={{uri:"https://png.pngtree.com/png-clipart/20191121/original/pngtree-family-avatars-icon-cartoon-style-png-image_5098755.jpg"}} style={{width:50, height:50, justifyContent:'left', borderRadius: 50, alignContent:'left' }}></Image>
+         </View>
+         <View style={styles.MyContainer}>
+         <Text style={{textAlign:'center', color:'white',}}>FRIENDS</Text>
+         <Image source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO9RwPGkBgmid4u7qJfTIIqplcJrKC_ajtCA&usqp=CAU"}} style={{width:50, height:50, justifyContent:'left', borderRadius: 50, alignContent:'left'}}></Image>
+         
+         </View>
+        </View>
+      
+        
+        
+        
+      
+      
+       
+      
+    );
+};
+
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop:30,
+    marginLeft:10,
+    marginRight:10,
+    backgroundColor:'orange'
+    
+
+  },
+  MainContainer:{
+    
+    backgroundColor:'black'
+    
+  },
+UpperContainer:{
+  backgroundColor:'skyblue'
+},
+LayoutContainer:{
+  backgroundColor:'blue'
+},
+
+MyContainer :{
+  backgroundColor:'#3c1361'
+}
+ 
+  
+});
+
+export default card;

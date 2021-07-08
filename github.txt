@@ -1,0 +1,36 @@
+git clone https://www.github.com
+
+git remote add origin https://www.github.com
+
+git add .
+
+git commit -m "any comment"
+
+git push origin master(branch name)
+
+git pull <branch name>
+
+git status
+
+git checkout (branch name)
+
+git checkout -b "branch name"
+
+git init
+
+git branch <branch name>
+
+git branch -a
+
+git branch -d <branch name>
+
+git merge <branch name>
+
+
+github username and password
+
+username: - sapnasingh9876556789
+password: - kli@1994
+
+
+https://github.com/sapnasingh9876556789/cashbackjazz
